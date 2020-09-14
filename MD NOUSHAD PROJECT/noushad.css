@@ -1,0 +1,578 @@
+/*============================================================================================ 
+    Please note that this webpage was written mobile first 
+==============================================================================================*/
+
+/*============================================================================================
+    COMMON STYLES FOR BOTH MOBILE AND DESKTOP SCREEN 
+==============================================================================================*/
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("images/bg.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 100%; 
+    background-blend-mode:multiply;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3rem;
+}
+
+img { width: 100%; }
+
+a { outline: 0; }
+
+/* ==============================================================================================
+    Mobile CSS  Starts Here
+=================================================================================================*/
+
+/* ====== Top_header Style ====== */
+header {
+    background: #B73885;
+    padding: 0;
+}
+
+.topHeaderContainer,
+.flexContainer,
+.containerThreeColumns,
+.anyDeskContainer,
+.four-col-container {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.topList {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin: 0  auto;
+    padding: 1em 0;
+    list-style: none;
+}
+
+.topItem {
+    padding: .25em 0;
+}
+
+.topLink {
+    font-size: 16px;
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+
+/* ==============================================================================================
+    HeaderContainer comprising the logo, title and navigation 
+================================================================================================= */
+.HeaderContainer {
+    background: #4b0aac;
+    color: whitesmoke;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+/* ========= Hamburger Menu Icon Styles ======== */
+.naav {
+    display: none;
+}
+
+.menuContainer {
+    width: 97%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.menuIkon {
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    height: 0px;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    transition: 0.4s;
+    margin: 6px 0px;
+}
+
+.change .bar1 {
+    transform: rotate(-45deg) translate(-7px, 6px);
+    border-radius: 12px
+}
+
+.change .bar2 { opacity: 0; }
+
+.change .bar3 {
+    transform: rotate(45deg) translate(-6px, -6px);
+    border-radius: 12px;
+}
+
+/* ===== Navigation and Logo Styles =====*/
+.naavContainer {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    min-width: 210px;
+    margin: 0 auto;
+}
+
+.logoImage{
+    width: 200px;
+    height: 80px;
+}
+
+.title {
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    color: red;
+    margin-top: -20px;
+    margin-left: -20px;
+}
+
+/* ====== Navigation style proper ====== */
+.naavList {
+    list-style: none;
+    margin: 0;
+    padding: .25em 0;
+    text-align: center;
+}
+
+.naavItem {
+    padding: .25em 1em;
+}
+
+.naavLink {
+    display: inline-block;
+    text-decoration: none;
+    color: aliceblue;
+    padding: 0 1em;
+}
+
+.naavLink:hover {
+    opacity: 1;
+    border-bottom: 3px solid red;
+    border-radius: 5px;
+    padding: 5px 5px;
+}
+
+
+/*========================================================================================
+    Main of the Page with Title "Remote Desktop Software" 
+==========================================================================================*/
+.remoteContainer {
+    background: rgba(0, 0, 0, 0.75);
+    color: whitesmoke;
+    padding: 0.8em 0;
+}
+
+.flexRemote {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.maxImage {
+    max-width: 400px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn1, .btn2, .btn3 {
+    display: inline-block;
+    background-color: #ccc;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    color: #6A32BE;
+    margin: 0.5em 0;
+    border-radius: 100px;
+}
+
+.span {
+    font-size: 12px;
+}
+
+.btn1, .btn2{
+    padding: .25em 2em;
+    cursor: pointer;
+}
+
+.btn2 {
+    background-color: #4b0aac;
+    color: #ccc;
+}
+
+.btn3 {
+    padding: .45em 1em;
+    cursor: pointer;
+}
+
+.btn1:hover, 
+.btn3:hover {
+    background: #4b0aac;
+    color: #ccc;
+}
+
+.btn2:hover {
+    background-color: #ccc;
+    color:  #4b0aac;
+}
+
+/* .btn3:hover {
+    box-shadow: 0 -2px  25px rgb(75, 10, 172);
+} */
+
+
+/*============================================================================================
+    First Section: Activities on the page style 
+==============================================================================================*/
+.activity {
+    background: linear-gradient(45deg,  #4b0aac, #EB5672);
+    padding: 1.75em 0;
+}
+.threeActivity {
+    width: 85%;
+    margin: 1em auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.threColumns {
+    background: linear-gradient(45deg, #EB5672, #4b0aac);
+    width: 250px;
+    margin: 0.6em 0;
+    padding-top: 5px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.threeImage {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+}
+
+.threColumns h2 {
+    background-color: #4b0aac;
+    font-size: 20px;
+    color: white;
+    border-radius: 8px;
+    padding: .25em 0;
+}
+
+/*==========================================================================================
+    Second section:  Multi-platform Support Styles
+============================================================================================*/
+.MultiPlatform {
+    background: #B3A7B8;
+}
+
+.multiContent-white {
+    padding: 1em 0;
+}
+
+.multi-inner-container{
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.multi-inner-container p {
+    margin-top: 12px;
+    color: #0c0c0c;
+}
+
+.multiImage {
+    width: 85%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.multiImage img {
+    max-width: 800px; 
+}
+
+  
+/*===========================================================================================
+    Third Section:  Features Styles
+=============================================================================================*/
+.twoRows {
+    /* background-color: #000; */
+    background: linear-gradient(45deg, #4b0aac, #EB5672, #4b0aac);
+    padding: 1.75em 0;
+}
+
+.threeItemsContent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    font-size: 18px;
+}
+
+.circle {
+    width: 100%;
+    height: 50%;
+    border-radius: 20px;
+    background: #00C9B3;
+    clip-path: circle(180px at center 0);
+    text-align: center;
+}
+
+.card {
+    max-width: 300px;
+    height: 500px;
+    background: #B3A7B8;
+    color: #0c0c0c;
+    margin: 10px 0;
+    border-radius: 20px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.cardContent {
+    margin-top: -2em;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.cardContent h2 {
+    font-size: 25px;
+}
+
+.cardContent p {
+    padding: 0 12px;
+}
+
+.sixImages {
+    background: linear-gradient(45deg, #4b0aac, #EB5672);;
+    width: 100px;
+    height: 100px;
+    margin-top: 0.7em;
+    border-radius: 50%;
+}
+
+/*=========================================================================================
+    Fourth Section:  Remote Software Style
+===========================================================================================*/
+.containterAnyDesk{
+    background: rgba(0, 0, 0, 0.85);
+}
+
+.anyDeskContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em 0;
+    text-align: center;
+}
+
+.anyDeskContent  h1 {
+    font-size: 35px;
+    color:  white;
+}
+
+.anyDeskContent  p {
+    padding: 12px;
+    color:  white;
+}
+
+.anyDeskContent  .buton {
+    background-color: #4b0aac;
+    color: #ccc;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 100px;
+    margin: 15px 0 5px 0;
+    padding: 18px;
+}
+
+.buton:hover {
+    background: linear-gradient(45deg, #4b0aac, #EB5672);
+    color: #4b0aac;
+    cursor: pointer;
+}
+
+
+/*==========================================================================================
+    Fifth Section: Footer Style
+============================================================================================*/
+.bottomContainer {
+    background: #4b0aac;
+    color: whitesmoke;
+    padding: 2em 0;
+}
+
+.four-col-items {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-evenly;
+}
+
+.ulDiv {
+    width: 200px;
+    margin: 10px 0;
+    padding-left: 0px;
+
+}
+
+.ulDiv ul {
+    list-style: none;
+    line-height: 28px;
+}
+
+.ulDiv ul li {
+    font-size: 17px;
+}
+
+.ulDiv h4 {
+    color: yellow;
+}
+
+.ft {
+    background-color:  #B73885;
+    text-align: center;
+    padding: 5px 10px;
+    color: white;
+    font-size: 18px;
+    border-top: 2px solid yellow;
+}
+
+.ft i {
+    color:  #4b0aac;
+}
+
+
+
+/*=======================================================================================
+    MEDIA QUERIES FOR TABLET AND DESKTOP SCREENS
+=========================================================================================*/
+
+@media (min-width: 760px) {
+
+    .topList {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end; 
+        margin: 0  auto;
+        padding: .25em 0;
+
+    }
+    
+    .topItem {
+        padding:  0 .35em;
+    }
+    
+    .containerItems {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    } 
+
+    .logo {
+        margin-left: 0;
+    }
+
+    .naavContainer {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .title{
+        font-size: 22px;
+    }
+
+    /* ===== Navigation style proper for big screen ====== */
+    .menuContainer {
+        display: none;
+    }
+
+    .naav {
+        display: block;
+        margin-right: 0;
+    }
+
+    .naavList {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-right: 0;
+        padding:  0;
+        font-size: 18px;
+    }
+
+    .naavLink {
+        padding: 5px 5px;
+        border-radius: 12px;
+    }
+
+    .flexRemote{
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
+    .remoteContent > h1, h2, p {
+        max-width: 550px;
+        line-height: 1.5;
+    }
+
+    .remotebuttons {
+        width: 85%;
+        margin: 0 auto;
+    }
+    
+    .buttons {
+        display: block;
+    }
+
+    .buttons > .btn1, .btn2, .btn3 {
+        margin: 0.5em 0em;
+    }
+
+    .glowingText {
+        font-size: 40px;
+    }
+
+    .threeItemsContent {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .four-col-items {
+        flex-direction: row;
+        align-items: baseline;
+        justify-content: space-between;
+    }
+}
